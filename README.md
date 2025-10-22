@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Salvatore, if you want you can call me Salva</h1>
-<h3 align="center">Mathematics | Mathematical and physical modelling for engineering | ML and NNs | Mechanical Engineering</h3>
+<h3 align="center">Mathematics | Mathematical and physical modelling for engineering | ML and NNs </h3>
 
 - 🔭 I’m currently working on **Wind Velocity Maps Predictions**
 
