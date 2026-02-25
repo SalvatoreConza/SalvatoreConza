@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Salvatore, if you want you can call me Salva</h1>
 <h3 align="center">Mathematics | Mathematical and physical modelling for engineering | ML and NNs </h3>
 
-- 🔭 I’m currently working on **Wind Velocity Maps Predictions via Fourier Neural Operators**
+- 🔭 I’m currently working on **Wind Velocity Maps Predictions via Fourier Neural Operators** 💨🍃
 
-- ⏳ I have worked on **Rat Pose Estimation and Detection via Convolutional Neural Networks**
+- ⏳ I have worked on **Rat Pose Estimation and Detection via Convolutional Neural Networks** 🐀🐁
 
-- 🌱 I’m currently learning **Machine Learning** and **Deep Learning**
+- 🌱 I’m currently learning **Machine Learning** and **Deep Learning** 
 
 - 📫 How to reach me **s.conza@studenti.unina.it**
 
