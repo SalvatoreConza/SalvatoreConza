@@ -5,7 +5,7 @@
 
 - ⏳ I have worked on **Rat Pose Estimation and Detection via Convolutional Neural Networks**
 
-- 🌱 I’m currently learning **Machine Learning**
+- 🌱 I’m currently learning **Machine Learning** and **Deep Learning**
 
 - 📫 How to reach me **s.conza@studenti.unina.it**
 
