@@ -5,7 +5,9 @@
 
 - ⏳ I have worked on **Rat Pose Estimation and Detection via Convolutional Neural Networks** 🐀🐁
 
-- 🌱 I’m currently learning **Machine Learning** and **Deep Learning** 
+- 🌱 I’m currently learning **Machine Learning** and **Deep Learning**
+
+- 🎯 I'm currently trying to land an internship at GSoC26, Vulcanus or in a Lab.
 
 - 📫 How to reach me **s.conza@studenti.unina.it**
 
