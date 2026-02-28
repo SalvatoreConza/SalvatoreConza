@@ -11,6 +11,8 @@
 
 - 📫 How to reach me **s.conza@studenti.unina.it**
 
+- 🃏 Curiosity about me: I was [top1000](https://www.reddit.com/r/MarvelSnap/comments/1mbeuna/making_infinite_top_1000_khonshu_discard/) infinite on Marvel Snap (top 0.1%-0.01% of the players)
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/salvatore conza angelo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="salvatore conza angelo" height="30" width="40" /></a>
