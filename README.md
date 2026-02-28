@@ -11,7 +11,7 @@
 
 - 📫 How to reach me **s.conza@studenti.unina.it**
 
-- 🃏 Curiosities about me: I was [top1000](https://www.reddit.com/r/MarvelSnap/comments/1mbeuna/making_infinite_top_1000_khonshu_discard/) infinite on Marvel Snap (top 0.1%-0.01% of the players).
+- 🃏 Curiosity about me: I was [top1000](https://www.reddit.com/r/MarvelSnap/comments/1mbeuna/making_infinite_top_1000_khonshu_discard/) infinite on Marvel Snap (top 0.1%-0.01% of the players).    
   I have worked and studied in Italy, Germany, Sweden and Spain.
 
 
