@@ -5,7 +5,7 @@
 
 - ⏳ I have worked on **Rat Pose Estimation and Detection via Convolutional Neural Networks** 🐀🐁
 
-- 🌱 I’m currently learning **Machine Learning** and **Deep Learning**
+- 🌱 I’m currently learning **Machine Learning** and **Deep Learning** by contibuiting to ML/DL repos like DeepChem, Visdom, Alaska Firebanks and ML4SCI. 
 
 - 🎯 I'm currently trying to land an internship at **GSoC26**, **Vulcanus** or in a **ML Lab**.
 
