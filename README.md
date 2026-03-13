@@ -19,8 +19,3 @@ I have worked and studied in Italy, Germany, Sweden and Spain.
 <div align="center">
   <img src="https://media1.tenor.com/m/9PALsSO_XpsAAAAd/misaka-mikoto.gif" width="400" alt="Misaka Mikoto" />
 </div>
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/salvatore conza angelo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="salvatore conza angelo" height="30" width="40" /></a>
-</p>
