@@ -1,4 +1,8 @@
 <h1 align="center">Hi 👋, I'm Salvatore, if you want you can call me Salva</h1>
+<div align="center">
+  <img src="https://media1.tenor.com/m/9PALsSO_XpsAAAAd/misaka-mikoto.gif" width="400" alt="Misaka Mikoto" />
+</div>
+
 <h3 align="center">Mathematics | Mathematical and physical modelling for engineering | ML and NNs </h3>
 
 - 🔭 I’m currently working on **Wind Velocity Maps Predictions via Fourier Neural Operators** and **Graph Neural Operators** 💨🍃
