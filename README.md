@@ -20,7 +20,6 @@ I have worked and studied in Italy, Germany, Sweden and Spain.
 <p align="left">
 <a href="https://linkedin.com/in/salvatore conza angelo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="salvatore conza angelo" height="30" width="40" /></a>
 </p>
-
 <h3 align="left">Languages and Tools:</h3>
 <p align="left">
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer" style="text-decoration:none;"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a>
@@ -37,7 +36,6 @@ I have worked and studied in Italy, Germany, Sweden and Spain.
   <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer" style="text-decoration:none;"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a>
   <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer" style="text-decoration:none;"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a>
 </p>
-
 <div align="center">
   <img src="https://media1.tenor.com/m/9PALsSO_XpsAAAAd/misaka-mikoto.gif" width="400" alt="Misaka Mikoto" />
 </div>
