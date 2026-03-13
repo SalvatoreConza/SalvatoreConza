@@ -1,7 +1,4 @@
 <h1 align="center">Hi 👋, I'm Salvatore, if you want you can call me Salva</h1>
-<div align="center">
-  <img src="https://media1.tenor.com/m/9PALsSO_XpsAAAAd/misaka-mikoto.gif" width="400" alt="Misaka Mikoto" />
-</div>
 
 <h3 align="center">Mathematics | Mathematical and physical modelling for engineering | ML and NNs </h3>
 
@@ -19,6 +16,9 @@
 
 I have worked and studied in Italy, Germany, Sweden and Spain.
 
+<div align="center">
+  <img src="https://media1.tenor.com/m/9PALsSO_XpsAAAAd/misaka-mikoto.gif" width="400" alt="Misaka Mikoto" />
+</div>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
