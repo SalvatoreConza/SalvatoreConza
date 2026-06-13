@@ -20,4 +20,9 @@ I have worked and studied in Italy, Germany, Sweden and Spain.
   <img src="https://media1.tenor.com/m/9PALsSO_XpsAAAAd/misaka-mikoto.gif" width="400" alt="Misaka Mikoto" />
 </div>
 
-![freeCodeCamp stats](https://fcc-stats-card.vercel.app/api/fcc?username=salvatore_conza_angelo)
+<br>
+
+<div align="center">
+  <img src="https://fcc-stats-card.vercel.app/api/fcc?username=salvatore_conza_angelo" alt="freeCodeCamp Stats" width="48%" />
+  <img src="https://leetcard.jacoblin.cool/m1qvVgbQJr?theme=dark&font=baloo&ext=activity" alt="LeetCode Stats" width="48%" />
+</div>
