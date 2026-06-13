@@ -24,5 +24,4 @@ I have worked and studied in Italy, Germany, Sweden and Spain.
 
 <div align="center">
   <img src="https://fcc-stats-card.vercel.app/api/fcc?username=salvatore_conza_angelo" alt="freeCodeCamp Stats" height="190" />
-  <img src="https://leetcard.jacoblin.cool/m1qvVgbQJr?theme=dark&font=baloo" alt="LeetCode Stats" height="190" />
 </div>
