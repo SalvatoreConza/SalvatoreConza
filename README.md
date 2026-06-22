@@ -8,7 +8,6 @@
 - 📫 How to reach me **s.conza@studenti.unina.it**
 - 🃏 Curiosity about me: I was [top1000](https://www.reddit.com/r/MarvelSnap/comments/1mbeuna/making_infinite_top_1000_khonshu_discard/) infinite on Marvel Snap (top 0.1%-0.01% of the players).
 - 🌍 I have worked and studied in Italy, Germany, Sweden and Spain.
-
 <div align="center">
   <img src="https://media1.tenor.com/m/9PALsSO_XpsAAAAd/misaka-mikoto.gif" width="400" alt="Misaka Mikoto" />
 </div>
@@ -16,10 +15,11 @@
 <table align="center">
   <tr>
     <td valign="top">
-      <img src="https://fcc-stats-card.vercel.app/api/fcc?username=salvatore_conza_angelo" alt="freeCodeCamp Stats" height="280" />
+      <img src="https://fcc-stats-card.vercel.app/api/fcc?username=salvatore_conza_angelo" alt="freeCodeCamp Stats" height="200" />
     </td>
     <td valign="top">
-      <img src="https://leetcard.jacoblin.cool/m1qvVgbQJr?theme=dark&ext=heatmap&font=Inter" alt="LeetCode Stats" height="280" />
+      <img src="https://leetcard.jacoblin.cool/m1qvVgbQJr?theme=dark&ext=heatmap&font=Inter" alt="LeetCode Stats" height="200" />
     </td>
   </tr>
 </table>
+
