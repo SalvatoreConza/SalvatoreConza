@@ -18,7 +18,7 @@
       <img src="https://fcc-stats-card.vercel.app/api/fcc?username=salvatore_conza_angelo" alt="freeCodeCamp Stats" height="200" />
     </td>
     <td valign="top">
-      <img src="https://leetcard.jacoblin.cool/m1qvVgbQJr?theme=dark&ext=heatmap&font=Inter" alt="LeetCode Stats" height="200" />
+      <img src="https://leetcard.jacoblin.cool/Salvatore_Conza_Angelo?theme=dark&ext=heatmap&font=Inter" alt="LeetCode Stats" height="200" />
     </td>
   </tr>
 </table>
