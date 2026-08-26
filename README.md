@@ -8,6 +8,7 @@
 - 📫 How to reach me **s.conza@studenti.unina.it**
 - 🃏 Curiosity about me: I was [top1000](https://www.reddit.com/r/MarvelSnap/comments/1mbeuna/making_infinite_top_1000_khonshu_discard/) infinite on Marvel Snap (top 0.1%-0.01% of the players).
 - 🌍 I have worked and studied in Italy, Germany, Sweden and Spain.
+- 💻 Languages: **Python** 🐍 · **C++** ➕➕ · **Bash** 🐚 · **SQL** 🗄️
 <div align="center">
   <img src="https://media1.tenor.com/m/9PALsSO_XpsAAAAd/misaka-mikoto.gif" width="400" alt="Misaka Mikoto" />
 </div>
