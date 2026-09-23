@@ -19,13 +19,12 @@
       <img src="https://leetcard.jacoblin.cool/Salvatore_Conza_Angelo?theme=dark&ext=heatmap&font=Inter" alt="LeetCode Stats" height="200" />
     </td>
     <td valign="top">
-      <img src="https://github.r2v.ch/codewars?user=SalvatoreConza&theme=dark&top_languages=true" alt="Codewars Stats" height="200" />
+      <img src="heatmaps/codewars.svg" alt="Codewars Stats" height="200" />
     </td>
   </tr>
   <tr>
-    <td valign="top" align="center">
-      <img src="https://road-to-kaggle-grandmaster.vercel.app/api/badges/salvatoreangeloconza/competition" alt="Kaggle Competitions" height="200" />
-      <img src="https://road-to-kaggle-grandmaster.vercel.app/api/badges/salvatoreangeloconza/notebook" alt="Kaggle Notebooks" height="200" />
+    <td valign="top">
+      <img src="heatmaps/kaggle.svg" alt="Kaggle Stats" height="200" />
     </td>
     <td valign="top">
       <img src="https://fcc-stats-card.vercel.app/api/fcc?username=salvatore_conza_angelo" alt="freeCodeCamp Stats" height="200" />
