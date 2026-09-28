@@ -27,7 +27,7 @@
       <img src="heatmaps/kaggle.svg" alt="Kaggle Stats" height="200" />
     </td>
     <td valign="top">
-      <img src="https://fcc-stats-card.vercel.app/api/fcc?username=salvatore_conza_angelo" alt="freeCodeCamp Stats" height="200" />
+      <img src="heatmaps/freecodecamp.svg" alt="freeCodeCamp Stats" height="200" />
     </td>
   </tr>
 </table>

@@ -1,4 +1,4 @@
-"""Generate Codewars and Kaggle activity heatmap cards for the profile README.
+"""Generate Codewars, Kaggle and freeCodeCamp activity heatmap cards for the profile README.
 
 Run by .github/workflows/heatmaps.yml once a day. Standard library only.
 The cards mimic the dark leetcard.jacoblin.cool heatmap card (500x320).
@@ -15,6 +15,7 @@ from pathlib import Path
 
 CODEWARS_USER = "SalvatoreConza"
 KAGGLE_USER = "salvatoreangeloconza"
+FCC_USER = "salvatore_conza_angelo"
 
 OUT_DIR = Path(__file__).resolve().parent
 UA = "Mozilla/5.0 (profile-heatmaps; +https://github.com/SalvatoreConza/SalvatoreConza)"
@@ -33,6 +34,7 @@ KAGGLE_TIER_COLORS = {
     "NOVICE": "#5ac995", "CONTRIBUTOR": "#20beff", "EXPERT": "#95628f",
     "MASTER": "#f96517", "GRANDMASTER": "#dca917",
 }
+FCC_GREEN = "#acd157"
 
 
 # ---------------------------------------------------------------- fetching
@@ -78,6 +80,16 @@ def fetch_kaggle(user):
     profile = call("GetProfile")
     counts = {a["date"][:10]: a.get("totalSubmissionsCount", 0) for a in call("GetUserActivity").get("activities", [])}
     return profile, {d: c for d, c in counts.items() if c}
+
+
+def fetch_freecodecamp(user):
+    data = get_json(f"https://api.freecodecamp.org/users/get-public-profile?username={user}")
+    profile = data["entities"]["user"][data["result"]]
+    counts = {}
+    for ts, c in profile.get("calendar", {}).items():
+        day = dt.datetime.fromtimestamp(int(ts), dt.timezone.utc).date().isoformat()
+        counts[day] = counts.get(day, 0) + c
+    return profile, counts
 
 
 # ---------------------------------------------------------------- stats
@@ -206,10 +218,26 @@ def kaggle_card(today):
                 KAGGLE_TIER_COLORS.get(tier, MUTED), top, counts, today)
 
 
+def freecodecamp_card(today):
+    profile, counts = fetch_freecodecamp(FCC_USER)
+    certs = sum(1 for k, v in profile.items() if k.startswith("is") and "Cert" in k and v is True)
+    joined = dt.date.fromisoformat(profile["joinDate"][:10])
+    last = max(counts) if counts else None
+    top = [
+        (f"{len(profile.get('completedChallenges', [])):,}", "Challenges"),
+        (f"{profile.get('points', 0):,}", "Points"),
+        (joined.strftime("%b %Y"), "Joined"),
+        (dt.date.fromisoformat(last).strftime("%b %d").replace(" 0", " ") if last else "—", "Last Active"),
+    ]
+    return card("FREECODECAMP", FCC_GREEN, profile.get("usernameDisplay") or profile["username"],
+                f"{certs} Cert{'s' * (certs != 1)}", FCC_GREEN if certs else MUTED, top, counts, today)
+
+
 def main():
     today = dt.datetime.now(dt.timezone.utc).date()
     failed = False
-    for name, build in (("codewars", codewars_card), ("kaggle", kaggle_card)):
+    for name, build in (("codewars", codewars_card), ("kaggle", kaggle_card),
+                        ("freecodecamp", freecodecamp_card)):
         try:
             (OUT_DIR / f"{name}.svg").write_text(build(today), encoding="utf-8")
             print(f"{name}: ok")
