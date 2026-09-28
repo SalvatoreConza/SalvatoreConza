@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="320" viewBox="0 0 500 320" font-family="Inter, 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif">
 <title>KAGGLE activity for Salvatore Angelo Conza</title>
 <rect x="0.5" y="0.5" width="499" height="319" rx="4" fill="#101010" stroke="#404040"/>
-<text x="20" y="34" font-size="13" font-weight="700" fill="#20beff" text-anchor="start">KAGGLE</text>
-<text x="20" y="60" font-size="22" font-weight="700" fill="#f0f0f0" text-anchor="start">Salvatore Angelo Conza</text>
+<text x="38" y="58" font-size="46" font-weight="700" fill="#20beff" text-anchor="middle">k</text>
+<text x="68" y="34" font-size="13" font-weight="700" fill="#20beff" text-anchor="start">KAGGLE</text>
+<text x="68" y="60" font-size="22" font-weight="700" fill="#f0f0f0" text-anchor="start">Salvatore Angelo Conza</text>
 <rect x="386.8" y="30" width="93.2" height="24" rx="12" fill="none" stroke="#20beff" stroke-width="1.5"/>
 <text x="433.4" y="46" font-size="12" font-weight="700" fill="#20beff" text-anchor="middle">Contributor</text>
 <text x="77.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">22</text>

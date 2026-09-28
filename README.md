@@ -16,7 +16,7 @@
 <table align="center">
   <tr>
     <td valign="top">
-      <img src="https://leetcard.jacoblin.cool/Salvatore_Conza_Angelo?theme=dark&ext=heatmap&font=Inter" alt="LeetCode Stats" height="200" />
+      <img src="heatmaps/leetcode.svg" alt="LeetCode Stats" height="200" />
     </td>
     <td valign="top">
       <img src="heatmaps/codewars.svg" alt="Codewars Stats" height="200" />

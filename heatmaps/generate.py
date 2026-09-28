@@ -1,4 +1,4 @@
-"""Generate Codewars, Kaggle and freeCodeCamp activity heatmap cards for the profile README.
+"""Generate LeetCode, Codewars, Kaggle and freeCodeCamp activity heatmap cards for the profile README.
 
 Run by .github/workflows/heatmaps.yml once a day. Standard library only.
 The cards mimic the dark leetcard.jacoblin.cool heatmap card (500x320).
@@ -13,6 +13,9 @@ import sys
 import urllib.request
 from pathlib import Path
 
+import icons
+
+LEETCODE_USER = "Salvatore_Conza_Angelo"
 CODEWARS_USER = "SalvatoreConza"
 KAGGLE_USER = "salvatoreangeloconza"
 FCC_USER = "salvatore_conza_angelo"
@@ -24,6 +27,8 @@ UA = "Mozilla/5.0 (profile-heatmaps; +https://github.com/SalvatoreConza/Salvator
 BG, BORDER, TEXT, MUTED = "#101010", "#404040", "#f0f0f0", "#9a9a9a"
 FONT = "Inter, 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif"
 
+LEETCODE_ORANGE = "#ffa116"
+LEETCODE_DIFFICULTY_COLORS = {"Easy": "#5cb85c", "Medium": "#f0ad4e", "Hard": "#d9534f"}
 CODEWARS_RED = "#b1361e"
 CODEWARS_RANK_COLORS = {
     "white": "#e6e6e6", "yellow": "#ecb613", "blue": "#3c7ebb",
@@ -43,6 +48,28 @@ def get_json(url, opener=None, data=None, headers=None):
     req = urllib.request.Request(url, data=data, headers={"User-Agent": UA, **(headers or {})})
     with (opener or urllib.request.build_opener()).open(req, timeout=30) as r:
         return json.load(r)
+
+
+def fetch_leetcode(user):
+    query = """query($u: String!) {
+      allQuestionsCount { difficulty count }
+      matchedUser(username: $u) {
+        username
+        profile { ranking }
+        submitStatsGlobal { acSubmissionNum { difficulty count } }
+        userCalendar { submissionCalendar }
+      }
+    }"""
+    data = get_json(
+        "https://leetcode.com/graphql",
+        data=json.dumps({"query": query, "variables": {"u": user}}).encode(),
+        headers={"Content-Type": "application/json", "Referer": "https://leetcode.com/"},
+    )["data"]
+    counts = {}
+    for ts, c in json.loads(data["matchedUser"]["userCalendar"]["submissionCalendar"]).items():
+        day = dt.datetime.fromtimestamp(int(ts), dt.timezone.utc).date().isoformat()
+        counts[day] = counts.get(day, 0) + c
+    return data, counts
 
 
 def fetch_codewars(user):
@@ -142,9 +169,14 @@ def stat_row(stats, y):
     return out
 
 
+def heatmap_start(today):
+    """The Sunday 52 weeks before this week's Sunday: the heatmap's first day."""
+    return today - dt.timedelta(days=(today.weekday() + 1) % 7) - dt.timedelta(weeks=52)
+
+
 def heatmap(counts, today, accent):
     """52-week grid of 7 rows (Sun..Sat); returns svg parts and the first date."""
-    first_sunday = today - dt.timedelta(days=(today.weekday() + 1) % 7) - dt.timedelta(weeks=52)
+    first_sunday = heatmap_start(today)
     peak = max([c for d, c in counts.items() if dt.date.fromisoformat(d) >= first_sunday] or [1])
     step, size = 8.6, 7.2
     out = []
@@ -160,15 +192,58 @@ def heatmap(counts, today, accent):
     return out, first_sunday
 
 
-def card(platform, accent, user, pill, pill_color, top_stats, counts, today):
+def logo(path, color):
+    """A Simple Icons path scaled into the 36x36 slot left of the card title."""
+    return (f'<svg x="20" y="24" width="36" height="36" viewBox="0 0 24 24">'
+            f'<path fill="{color}" d="{path}"/></svg>')
+
+
+def kaggle_logo():
+    # Simple Icons only has Kaggle's wordmark; its favicon is a lowercase "k".
+    return text(38, 58, "k", 46, KAGGLE_BLUE, 700, "middle")
+
+
+def stats_body(top_stats, counts, today):
+    return stat_row(top_stats, 105) + stat_row(activity_stats(counts, today, heatmap_start(today)), 155)
+
+
+def leetcode_body(solved, totals):
+    """leetcard-style solved ring on the left, per-difficulty progress bars on the right."""
+    cx, cy, r = 80, 132, 40
+    circ = 2 * math.pi * r
+    frac = solved["All"] / max(totals["All"], 1)
+    out = [
+        f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{BORDER}" stroke-width="6"/>',
+        f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{LEETCODE_ORANGE}" stroke-width="6" '
+        f'stroke-linecap="round" stroke-dasharray="{max(frac * circ, 0.1):.2f} {circ:.2f}" '
+        f'transform="rotate(-90 {cx} {cy})"/>',
+        text(cx, cy + 4, f"{solved['All']:,}", 24, TEXT, 700, "middle"),
+        text(cx, cy + 20, "Solved", 11, MUTED, 400, "middle"),
+    ]
+    x0, x1 = 160, 480
+    for i, level in enumerate(("Easy", "Medium", "Hard")):
+        y = 98 + 38 * i
+        color = LEETCODE_DIFFICULTY_COLORS[level]
+        width = (x1 - x0) * solved[level] / max(totals[level], 1)
+        out += [
+            text(x0, y, level, 15, TEXT, 700),
+            text(x1, y, f"{solved[level]:,} / {totals[level]:,}", 13, TEXT, 700, "end"),
+            f'<rect x="{x0}" y="{y + 8}" width="{x1 - x0}" height="4" rx="2" fill="{BORDER}"/>',
+            f'<rect x="{x0}" y="{y + 8}" width="{max(width, 4):.1f}" height="4" rx="2" fill="{color}"/>',
+        ]
+    return out
+
+
+def card(platform, accent, icon, user, pill, pill_color, body, counts, today):
     grid, start = heatmap(counts, today, accent)
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="500" height="320" viewBox="0 0 500 320" '
         f'font-family="{FONT}">',
         f'<title>{esc(platform)} activity for {esc(user)}</title>',
         f'<rect x="0.5" y="0.5" width="499" height="319" rx="4" fill="{BG}" stroke="{BORDER}"/>',
-        text(20, 34, platform, 13, accent, 700),
-        text(20, 60, user, 22, TEXT, 700),
+        icon,
+        text(68, 34, platform, 13, accent, 700),
+        text(68, 60, user, 22, TEXT, 700),
     ]
     pill_w = 14 + 7.2 * len(pill)
     parts += [
@@ -176,8 +251,7 @@ def card(platform, accent, user, pill, pill_color, top_stats, counts, today):
         f'fill="none" stroke="{pill_color}" stroke-width="1.5"/>',
         text(480 - pill_w / 2, 46, pill, 12, pill_color, 700, "middle"),
     ]
-    parts += stat_row(top_stats, 105)
-    parts += stat_row(activity_stats(counts, today, start), 155)
+    parts += body
     parts += [
         f'<line x1="10" y1="200" x2="490" y2="200" stroke="{BORDER}"/>',
         text(20, 220, "Heatmap (Last 52 Weeks)", 14, TEXT),
@@ -187,6 +261,16 @@ def card(platform, accent, user, pill, pill_color, top_stats, counts, today):
         "</svg>",
     ]
     return "\n".join(parts) + "\n"
+
+
+def leetcode_card(today):
+    data, counts = fetch_leetcode(LEETCODE_USER)
+    user = data["matchedUser"]
+    totals = {q["difficulty"]: q["count"] for q in data["allQuestionsCount"]}
+    solved = {q["difficulty"]: q["count"] for q in user["submitStatsGlobal"]["acSubmissionNum"]}
+    return card("LEETCODE", LEETCODE_ORANGE, logo(icons.LEETCODE, LEETCODE_ORANGE), user["username"],
+                f"#{user['profile']['ranking']:,}", LEETCODE_ORANGE, leetcode_body(solved, totals),
+                counts, today)
 
 
 def codewars_card(today):
@@ -199,8 +283,9 @@ def codewars_card(today):
         (f"#{pos:,}" if pos else "—", "Leaderboard"),
         (f"{len(profile['ranks'].get('languages', {}))}", "Languages"),
     ]
-    return card("CODEWARS", CODEWARS_RED, profile["username"], rank["name"],
-                CODEWARS_RANK_COLORS.get(rank["color"], MUTED), top, counts, today)
+    return card("CODEWARS", CODEWARS_RED, logo(icons.CODEWARS, CODEWARS_RED), profile["username"],
+                rank["name"], CODEWARS_RANK_COLORS.get(rank["color"], MUTED),
+                stats_body(top, counts, today), counts, today)
 
 
 def kaggle_card(today):
@@ -214,8 +299,9 @@ def kaggle_card(today):
         (joined.strftime("%b %Y"), "Joined"),
         (last.strftime("%b %d").replace(" 0", " "), "Last Active"),
     ]
-    return card("KAGGLE", KAGGLE_BLUE, profile.get("displayName") or KAGGLE_USER, tier.title(),
-                KAGGLE_TIER_COLORS.get(tier, MUTED), top, counts, today)
+    return card("KAGGLE", KAGGLE_BLUE, kaggle_logo(), profile.get("displayName") or KAGGLE_USER,
+                tier.title(), KAGGLE_TIER_COLORS.get(tier, MUTED), stats_body(top, counts, today),
+                counts, today)
 
 
 def freecodecamp_card(today):
@@ -229,15 +315,16 @@ def freecodecamp_card(today):
         (joined.strftime("%b %Y"), "Joined"),
         (dt.date.fromisoformat(last).strftime("%b %d").replace(" 0", " ") if last else "—", "Last Active"),
     ]
-    return card("FREECODECAMP", FCC_GREEN, profile.get("usernameDisplay") or profile["username"],
-                f"{certs} Cert{'s' * (certs != 1)}", FCC_GREEN if certs else MUTED, top, counts, today)
+    return card("FREECODECAMP", FCC_GREEN, logo(icons.FREECODECAMP, FCC_GREEN),
+                profile.get("usernameDisplay") or profile["username"], f"{certs} Cert{'s' * (certs != 1)}",
+                FCC_GREEN if certs else MUTED, stats_body(top, counts, today), counts, today)
 
 
 def main():
     today = dt.datetime.now(dt.timezone.utc).date()
     failed = False
-    for name, build in (("codewars", codewars_card), ("kaggle", kaggle_card),
-                        ("freecodecamp", freecodecamp_card)):
+    for name, build in (("leetcode", leetcode_card), ("codewars", codewars_card),
+                        ("kaggle", kaggle_card), ("freecodecamp", freecodecamp_card)):
         try:
             (OUT_DIR / f"{name}.svg").write_text(build(today), encoding="utf-8")
             print(f"{name}: ok")
