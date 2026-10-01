@@ -30,5 +30,10 @@
       <img src="heatmaps/freecodecamp.svg" alt="freeCodeCamp Stats" height="200" />
     </td>
   </tr>
+  <tr>
+    <td valign="top">
+      <a href="https://www.chess.com/member/salvatoreconza"><img src="heatmaps/chesscom.svg" alt="Chess.com Stats" height="200" /></a>
+    </td>
+  </tr>
 </table>
 

@@ -40,6 +40,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes"
           else
-            git commit -m "Update LeetCode, Codewars, Kaggle and freeCodeCamp heatmaps"
+            git commit -m "Update profile heatmaps"
             git push
           fi

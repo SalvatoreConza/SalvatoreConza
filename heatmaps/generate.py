@@ -1,4 +1,4 @@
-"""Generate LeetCode, Codewars, Kaggle and freeCodeCamp activity heatmap cards for the profile README.
+"""Generate LeetCode, Codewars, Kaggle, freeCodeCamp and Chess.com activity heatmap cards for the profile README.
 
 Run by .github/workflows/heatmaps.yml once a day. Standard library only.
 The cards mimic the dark leetcard.jacoblin.cool heatmap card (500x320).
@@ -19,6 +19,7 @@ LEETCODE_USER = "Salvatore_Conza_Angelo"
 CODEWARS_USER = "SalvatoreConza"
 KAGGLE_USER = "salvatoreangeloconza"
 FCC_USER = "salvatore_conza_angelo"
+CHESSCOM_USER = "salvatoreconza"
 
 OUT_DIR = Path(__file__).resolve().parent
 UA = "Mozilla/5.0 (profile-heatmaps; +https://github.com/SalvatoreConza/SalvatoreConza)"
@@ -40,6 +41,7 @@ KAGGLE_TIER_COLORS = {
     "MASTER": "#f96517", "GRANDMASTER": "#dca917",
 }
 FCC_GREEN = "#acd157"
+CHESSCOM_GREEN = "#81b64c"
 
 
 # ---------------------------------------------------------------- fetching
@@ -117,6 +119,18 @@ def fetch_freecodecamp(user):
         day = dt.datetime.fromtimestamp(int(ts), dt.timezone.utc).date().isoformat()
         counts[day] = counts.get(day, 0) + c
     return profile, counts
+
+
+def fetch_chesscom(user):
+    base = f"https://api.chess.com/pub/player/{user}"
+    profile, stats = get_json(base), get_json(f"{base}/stats")
+    counts = {}
+    # Monthly archives of finished games; the last 13 cover the 52-week heatmap.
+    for url in get_json(f"{base}/games/archives")["archives"][-13:]:
+        for game in get_json(url)["games"]:
+            day = dt.datetime.fromtimestamp(game["end_time"], dt.timezone.utc).date().isoformat()
+            counts[day] = counts.get(day, 0) + 1
+    return profile, stats, counts
 
 
 # ---------------------------------------------------------------- stats
@@ -320,11 +334,25 @@ def freecodecamp_card(today):
                 FCC_GREEN if certs else MUTED, stats_body(top, counts, today), counts, today)
 
 
+def chesscom_card(today):
+    profile, stats, counts = fetch_chesscom(CHESSCOM_USER)
+    modes = ("rapid", "blitz", "bullet", "daily")
+    ratings = {m: stats.get(f"chess_{m}", {}).get("last", {}).get("rating") for m in modes}
+    record = {k: sum(stats.get(f"chess_{m}", {}).get("record", {}).get(k, 0) for m in modes)
+              for k in ("win", "loss", "draw")}
+    top = [(f"{ratings[m]:,}" if ratings[m] else "—", m.title()) for m in modes]
+    return card("CHESS.COM", CHESSCOM_GREEN, logo(icons.CHESSCOM, CHESSCOM_GREEN),
+                profile["url"].rsplit("/", 1)[-1],
+                f"{record['win']}W {record['loss']}L {record['draw']}D", CHESSCOM_GREEN,
+                stats_body(top, counts, today), counts, today)
+
+
 def main():
     today = dt.datetime.now(dt.timezone.utc).date()
     failed = False
     for name, build in (("leetcode", leetcode_card), ("codewars", codewars_card),
-                        ("kaggle", kaggle_card), ("freecodecamp", freecodecamp_card)):
+                        ("kaggle", kaggle_card), ("freecodecamp", freecodecamp_card),
+                        ("chesscom", chesscom_card)):
         try:
             (OUT_DIR / f"{name}.svg").write_text(build(today), encoding="utf-8")
             print(f"{name}: ok")
