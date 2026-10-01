@@ -5,7 +5,7 @@
 <text x="68" y="34" font-size="13" font-weight="700" fill="#ffa116" text-anchor="start">LEETCODE</text>
 <text x="68" y="60" font-size="22" font-weight="700" fill="#f0f0f0" text-anchor="start">Salvatore_Conza_Angelo</text>
 <rect x="394.0" y="30" width="86.0" height="24" rx="12" fill="none" stroke="#ffa116" stroke-width="1.5"/>
-<text x="437.0" y="46" font-size="12" font-weight="700" fill="#ffa116" text-anchor="middle">#4,421,993</text>
+<text x="437.0" y="46" font-size="12" font-weight="700" fill="#ffa116" text-anchor="middle">#4,146,523</text>
 <circle cx="80" cy="132" r="40" fill="none" stroke="#404040" stroke-width="6"/>
 <circle cx="80" cy="132" r="40" fill="none" stroke="#ffa116" stroke-width="6" stroke-linecap="round" stroke-dasharray="1.48 251.33" transform="rotate(-90 80 132)"/>
 <text x="80" y="136" font-size="24" font-weight="700" fill="#f0f0f0" text-anchor="middle">24</text>
@@ -392,6 +392,7 @@
 <rect x="467.2" y="243.6" width="7.2" height="7.2" rx="1.5" fill="#ffa116" fill-opacity="0.16"/>
 <rect x="467.2" y="252.2" width="7.2" height="7.2" rx="1.5" fill="#ffa116" fill-opacity="0.55"/>
 <rect x="467.2" y="260.8" width="7.2" height="7.2" rx="1.5" fill="#ffa116" fill-opacity="0.16"/>
+<rect x="467.2" y="269.4" width="7.2" height="7.2" rx="1.5" fill="#ffa116" fill-opacity="0.16"/>
 <text x="20" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="start">2025-09-28</text>
-<text x="480" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="end">2026-09-30</text>
+<text x="480" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="end">2026-10-01</text>
 </svg>
