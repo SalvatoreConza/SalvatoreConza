@@ -5,8 +5,8 @@
 <text x="68" y="34" font-size="13" font-weight="700" fill="#81b64c" text-anchor="start">CHESS.COM</text>
 <text x="68" y="60" font-size="22" font-weight="700" fill="#f0f0f0" text-anchor="start">SalvatoreConza</text>
 <rect x="408.4" y="30" width="71.6" height="24" rx="12" fill="none" stroke="#81b64c" stroke-width="1.5"/>
-<text x="444.2" y="46" font-size="12" font-weight="700" fill="#81b64c" text-anchor="middle">3W 2L 0D</text>
-<text x="77.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">1,754</text>
+<text x="444.2" y="46" font-size="12" font-weight="700" fill="#81b64c" text-anchor="middle">5W 4L 0D</text>
+<text x="77.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">1,740</text>
 <text x="77.5" y="122" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Rapid</text>
 <text x="192.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">1,495</text>
 <text x="192.5" y="122" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Blitz</text>
@@ -14,13 +14,13 @@
 <text x="307.5" y="122" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Bullet</text>
 <text x="422.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">—</text>
 <text x="422.5" y="122" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Daily</text>
-<text x="77.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">5</text>
+<text x="77.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">9</text>
 <text x="77.5" y="172" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Past Year</text>
-<text x="192.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">4</text>
+<text x="192.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">6</text>
 <text x="192.5" y="172" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Active Days</text>
-<text x="307.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">4</text>
+<text x="307.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">6</text>
 <text x="307.5" y="172" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Current Streak</text>
-<text x="422.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">4</text>
+<text x="422.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">6</text>
 <text x="422.5" y="172" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Longest Streak</text>
 <line x1="10" y1="200" x2="490" y2="200" stroke="#404040"/>
 <text x="20" y="220" font-size="14" font-weight="400" fill="#f0f0f0" text-anchor="start">Heatmap (Last 52 Weeks)</text>
@@ -384,11 +384,12 @@
 <rect x="458.6" y="235.0" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.16"/>
 <rect x="458.6" y="243.6" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.16"/>
 <rect x="458.6" y="252.2" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.16"/>
-<rect x="458.6" y="260.8" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="1.0"/>
+<rect x="458.6" y="260.8" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.78"/>
 <rect x="458.6" y="269.4" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.55"/>
 <rect x="458.6" y="278.0" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.55"/>
 <rect x="458.6" y="286.6" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.55"/>
-<rect x="467.2" y="235.0" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.16"/>
+<rect x="467.2" y="235.0" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="1.0"/>
+<rect x="467.2" y="243.6" width="7.2" height="7.2" rx="1.5" fill="#81b64c" fill-opacity="0.55"/>
 <text x="20" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="start">2025-10-05</text>
-<text x="480" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="end">2026-10-04</text>
+<text x="480" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="end">2026-10-05</text>
 </svg>

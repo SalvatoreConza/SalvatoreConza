@@ -10,7 +10,7 @@
 <text x="77.5" y="122" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Honor</text>
 <text x="192.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">36</text>
 <text x="192.5" y="122" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Kata Solved</text>
-<text x="307.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">#37,850</text>
+<text x="307.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">#37,861</text>
 <text x="307.5" y="122" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Leaderboard</text>
 <text x="422.5" y="105" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">2</text>
 <text x="422.5" y="122" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Languages</text>
@@ -18,7 +18,7 @@
 <text x="77.5" y="172" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Past Year</text>
 <text x="192.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">7</text>
 <text x="192.5" y="172" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Active Days</text>
-<text x="307.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">1</text>
+<text x="307.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">0</text>
 <text x="307.5" y="172" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Current Streak</text>
 <text x="422.5" y="155" font-size="18" font-weight="700" fill="#f0f0f0" text-anchor="middle">4</text>
 <text x="422.5" y="172" font-size="11" font-weight="400" fill="#9a9a9a" text-anchor="middle">Longest Streak</text>
@@ -389,6 +389,7 @@
 <rect x="458.6" y="278.0" width="7.2" height="7.2" rx="1.5" fill="#b1361e" fill-opacity="0.16"/>
 <rect x="458.6" y="286.6" width="7.2" height="7.2" rx="1.5" fill="#b1361e" fill-opacity="0.35"/>
 <rect x="467.2" y="235.0" width="7.2" height="7.2" rx="1.5" fill="#b1361e" fill-opacity="0.16"/>
+<rect x="467.2" y="243.6" width="7.2" height="7.2" rx="1.5" fill="#b1361e" fill-opacity="0.16"/>
 <text x="20" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="start">2025-10-05</text>
-<text x="480" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="end">2026-10-04</text>
+<text x="480" y="310" font-size="10" font-weight="400" fill="#f0f0f0" text-anchor="end">2026-10-05</text>
 </svg>
