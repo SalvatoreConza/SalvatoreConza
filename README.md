@@ -34,7 +34,7 @@
   </tr>
   <tr>
     <td valign="top">
-      <a href="https://www.chess.com/member/salvatoreconza"><img src="heatmaps/chesscom.svg" alt="Chess.com Stats" height="200" /></a>
+      <a href="https://www.chess.com/member/salvatore_conza"><img src="heatmaps/chesscom.svg" alt="Chess.com Stats" height="200" /></a>
     </td>
     <td valign="top">
       <img src="heatmaps/pokerstars.svg" alt="PokerStars Stats" height="200" />
