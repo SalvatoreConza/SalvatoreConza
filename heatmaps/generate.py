@@ -19,7 +19,7 @@ LEETCODE_USER = "Salvatore_Conza_Angelo"
 CODEWARS_USER = "SalvatoreConza"
 KAGGLE_USER = "salvatoreangeloconza"
 FCC_USER = "salvatore_conza_angelo"
-CHESSCOM_USER = "salvatoreconza"
+CHESSCOM_USER = "salvatore_conza"
 
 OUT_DIR = Path(__file__).resolve().parent
 UA = "Mozilla/5.0 (profile-heatmaps; +https://github.com/SalvatoreConza/SalvatoreConza)"
