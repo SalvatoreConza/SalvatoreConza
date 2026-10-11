@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Salvatore, if you want you can call me Salva</h1>
 <h3 align="center">Mathematics | Engineering | Complex Systems | ML and NNs </h3>
 
-- 🔭 I'm currently working on **Wind Velocity Maps Predictions via Fourier Neural Operators** and **Graph Neural Operators** 💨🍃 (repo will be soon make public)
+- 🔭 I'm currently working on **Wind Velocity Maps Predictions via Fourier Neural Operators** and **Graph Neural Operators** 💨🍃 
 - ⏳ I have worked on [**Rat Pose Estimation and Detection via Convolutional Neural Networks**](https://github.com/SalvatoreConza/rat-pose-estimation-and-detections) 🐀🐁
 - 🌱 I'm currently learning **Machine Learning** and **Deep Learning** by contibuiting to ML/DL repos like DeepChem, Visdom, Alaska Firebanks and ML4SCI.
 - 🧩 I'm sharpening my data skills on [**Kaggle**](https://www.kaggle.com/salvatoreangeloconza) and my coding on [**LeetCode**](https://leetcode.com/u/Salvatore_Conza_Angelo/) and [**Codewars**](https://www.codewars.com/users/SalvatoreConza). 
