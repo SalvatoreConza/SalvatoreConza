@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.jpg" alt="banner" width="100%" />
+</p>
+
 <h1 align="center">Hi 👋, I'm Salvatore, if you want you can call me Salva</h1>
 <h3 align="center">Mathematics | Engineering | Complex Systems | ML and NNs </h3>
 
@@ -37,4 +41,3 @@
     </td>
   </tr>
 </table>
-
