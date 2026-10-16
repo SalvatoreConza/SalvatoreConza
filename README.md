@@ -15,29 +15,11 @@
 - 🃏 Curiosity about me: I was [top1000](https://www.reddit.com/r/MarvelSnap/comments/1mbeuna/making_infinite_top_1000_khonshu_discard/) infinite on Marvel Snap (top 0.1%-0.01% of the players). I also like **poker** ♠️ and **[chess](https://www.chess.com/member/salvatore_conza)** ♟️
 - 🌍 I have worked and studied in Italy, Germany, Sweden and Spain.
 - 💻 Confident on **Python** 🐍, **C++** ➕➕, **Bash** 🐚 and **SQL** 🗄️
-<table align="center">
-  <tr>
-    <td valign="top">
-      <a href="https://leetcode.com/u/Salvatore_Conza_Angelo/"><img src="heatmaps/leetcode.svg" alt="LeetCode Stats" height="200" /></a>
-    </td>
-    <td valign="top">
-      <a href="https://www.codewars.com/users/SalvatoreConza"><img src="heatmaps/codewars.svg" alt="Codewars Stats" height="200" /></a>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://www.kaggle.com/salvatoreangeloconza"><img src="heatmaps/kaggle.svg" alt="Kaggle Stats" height="200" /></a>
-    </td>
-    <td valign="top">
-      <a href="https://www.freecodecamp.org/salvatore_conza_angelo"><img src="heatmaps/freecodecamp.svg" alt="freeCodeCamp Stats" height="200" /></a>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://www.chess.com/member/salvatore_conza"><img src="heatmaps/chesscom.svg" alt="Chess.com Stats" height="200" /></a>
-    </td>
-    <td valign="top">
-      <img src="heatmaps/pokerstars.svg" alt="PokerStars Stats" height="200" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://leetcode.com/u/Salvatore_Conza_Angelo/"><img src="heatmaps/leetcode.svg" alt="LeetCode Stats" width="49%" /></a>
+  <a href="https://www.codewars.com/users/SalvatoreConza"><img src="heatmaps/codewars.svg" alt="Codewars Stats" width="49%" /></a>
+  <a href="https://www.kaggle.com/salvatoreangeloconza"><img src="heatmaps/kaggle.svg" alt="Kaggle Stats" width="49%" /></a>
+  <a href="https://www.freecodecamp.org/salvatore_conza_angelo"><img src="heatmaps/freecodecamp.svg" alt="freeCodeCamp Stats" width="49%" /></a>
+  <a href="https://www.chess.com/member/salvatore_conza"><img src="heatmaps/chesscom.svg" alt="Chess.com Stats" width="49%" /></a>
+  <img src="heatmaps/pokerstars.svg" alt="PokerStars Stats" width="49%" />
+</p>
